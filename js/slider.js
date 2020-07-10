@@ -1,21 +1,21 @@
 // Store the paths of your image in an array and the associated descriptions
-var paths = ["img/rouen.jpg","img/architecture.jpg", "img/residence.jpg"];
-var descriptions = [
+const PATHS = ["img/rouen.jpg","img/architecture.jpg", "img/residence.jpg"];
+const DESCRIPTIONS = [
   "Rénovation d'une maison ancienne et de charme en plein coeur de rouen",
   "Construction d'une maison traditionnelle dans un endroit calme et arboré",
   "Construction contemporaine aux prestations hors normes en plein coeur du Havre"
 ];
-var maxIndex = paths.length - 1;
+const maxIndex = PATHS.length - 1;
 
 // Get the image and the description paragraphe from the DOM
-var imageContainer = document.getElementById("slider_image");
-var description = document.getElementById("description");
+const imageContainer = document.getElementById("slider_image");
+const description = document.getElementById("description");
 
 // Set the image and the description according to the slider index
 function setCurrentContent() {
-  imageContainer.src = paths[currentIndex];
+  imageContainer.src = PATHS[currentIndex];
   centerImage();
-  description.innerHTML = "<p>" + descriptions[currentIndex] + "</p>";
+  description.innerHTML = `<p>${DESCRIPTIONS[currentIndex]}</p>`;
 }
 
 // Center the image in the div by calculating it's height
@@ -23,7 +23,6 @@ function centerImage() {
   let container = document.getElementById("sliderImages");
   const containerHeight = parseInt(window.getComputedStyle(container,null).getPropertyValue("height"), 10);
   const topPos = (imageContainer.height - containerHeight)/2;
-  console.log(imageContainer.height);
   if(topPos > 0) {
     imageContainer.style.top = `-${topPos}px`;
   }
@@ -35,13 +34,6 @@ function setIndex() {
   setCurrentContent();
 }
 
-// Initialize the slider with the first image and description
-var currentIndex = 0;
-setCurrentContent();
-
-// Launches the setimage function every 3 secondes
-var sliderTurn = setInterval(setIndex, 3000);
-
 // Function to show next or previous content
 function show(direction = false) {
   clearInterval(sliderTurn);
@@ -49,3 +41,10 @@ function show(direction = false) {
   setCurrentContent();
   sliderTurn = setInterval(setIndex, 3000);
 }
+
+// Initialize the slider with the first image and description
+var currentIndex = 0;
+setCurrentContent();
+
+// Launches the setimage function every 3 secondes
+var sliderTurn = setInterval(setIndex, 3000);
