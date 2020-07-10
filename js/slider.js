@@ -1,6 +1,10 @@
 // Store the paths of your image in an array and the associated descriptions
 var paths = ["img/rouen.jpg","img/architecture.jpg", "img/residence.jpg"];
-var descriptions = ["first description", "second description", "third description"];
+var descriptions = [
+  "Rénovation d'une maison ancienne et de charme en plein coeur de rouen",
+  "Construction d'une maison traditionnelle dans un endroit calme et arboré",
+  "Construction contemporaine aux prestations hors normes en plein coeur du Havre"
+];
 var maxIndex = paths.length - 1;
 
 // Get the image and the description paragraphe from the DOM
@@ -11,7 +15,7 @@ var description = document.getElementById("description");
 function setCurrentContent() {
   imageContainer.src = paths[currentIndex];
   centerImage();
-  description.innerHTML = descriptions[currentIndex];
+  description.innerHTML = "<p>" + descriptions[currentIndex] + "</p>";
 }
 
 // Center the image in the div by calculating it's height
