@@ -9,14 +9,26 @@ var description = document.getElementById("description");
 
 // Set the image and the description according to the slider index
 function setCurrentContent() {
- imageContainer.src = paths[currentIndex];
- description.innerHTML = descriptions[currentIndex];
+  imageContainer.src = paths[currentIndex];
+  centerImage();
+  description.innerHTML = descriptions[currentIndex];
+}
+
+// Center the image in the div by calculating it's height
+function centerImage() {
+  let container = document.getElementById("sliderImages");
+  const containerHeight = parseInt(window.getComputedStyle(container,null).getPropertyValue("height"), 10);
+  const topPos = (imageContainer.height - containerHeight)/2;
+  console.log(imageContainer.height);
+  if(topPos > 0) {
+    imageContainer.style.top = `-${topPos}px`;
+  }
 }
 
 // Function to update the index and display the associated image and description
 function setIndex() {
- currentIndex < maxIndex ? currentIndex +=1 : currentIndex = 0;
- setCurrentContent();
+  currentIndex < maxIndex ? currentIndex +=1 : currentIndex = 0;
+  setCurrentContent();
 }
 
 // Initialize the slider with the first image and description
@@ -28,8 +40,8 @@ var sliderTurn = setInterval(setIndex, 3000);
 
 // Function to show next or previous content
 function show(direction = false) {
- clearInterval(sliderTurn);
- direction === true ? (currentIndex < maxIndex ? currentIndex ++ : currentIndex = 0) : (currentIndex > 0 ? currentIndex -- : currentIndex = maxIndex);
- setCurrentContent();
- sliderTurn = setInterval(setIndex, 3000);
+  clearInterval(sliderTurn);
+  direction === true ? (currentIndex < maxIndex ? currentIndex ++ : currentIndex = 0) : (currentIndex > 0 ? currentIndex -- : currentIndex = maxIndex);
+  setCurrentContent();
+  sliderTurn = setInterval(setIndex, 3000);
 }
