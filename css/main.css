@@ -102,6 +102,54 @@ textarea {
   border-radius: 0;
 }
 
+
+#slider {
+   margin: auto;
+ }
+
+ #sliderImages {
+   height: 70vh;
+   position: relative;
+   overflow: hidden;
+ }
+
+ #slider img {
+   width: 100%;
+   position: absolute;
+ }
+
+ #description {
+   position: absolute;
+   width: 100%;
+   height: 20%;
+   left: 0;
+   bottom: 0;
+   opacity: .8;
+   background-color: black;
+   margin: 0;
+   color: white;
+   text-align: center;
+ }
+
+ #description p {
+   width: 90%;
+   margin: auto;
+ }
+
+#previous, #next {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+#previous {
+  left: 0;
+}
+
+#next {
+  right: 0;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
