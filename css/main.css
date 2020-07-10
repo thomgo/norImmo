@@ -87,6 +87,21 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Utility classes */
+.mainBg {
+  background-color: #375B6C;
+  color : #EDF4ED;
+}
+
+.secondBg {
+  background-color: #90C2E7;
+  color : #011627;
+}
+
+.jumbotron {
+  border-radius: 0;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -260,4 +275,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-

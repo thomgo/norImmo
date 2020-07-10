@@ -7,11 +7,59 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Accueil</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header class="jumbotron mainBg mb-0">
+      <section>
+        <h1 class="display-4">NorImmo</h1>
+        <p class="lead">Le leader de la construction de maison individuelle en Normandie</p>
+        <hr class="my-4">
+        <p>Notre équipe vous accompagne dans la réalisation de votre projet</p>
+        <a class="btn secondBg btn-lg" href="#" role="button">Simuler le coût</a>
+      </section>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light secondBg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Questions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Estimation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container mt-5">
+      <h2>Quelques projets dans votre région</h2>
+
+      <section>
+        <h3>NorImmo en quelques mots</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius itaque eveniet corporis omnis sit, animi repudiandae nobis totam exercitationem, sapiente, odio, id dignissimos neque magni laborum accusamus eos expedita!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ad laudantium provident aut, nisi facilis, quia dolores in explicabo quaerat saepe corporis officia exercitationem error optio perspiciatis, ipsa praesentium doloribus!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repellendus molestias libero, commodi blanditiis, omnis voluptas inventore facere tempore, asperiores perferendis mollitia aliquam enim. Natus fuga asperiores sequi eligendi numquam.</p>
+      </section>
+    </main>
+
+    <footer class="jumbotron jumbotron-fluid mb-0 mt-5">
+      <section class="container">
+        <h6>Site NorImmo tous droits réservés</h6>
+        <p class="lead">Toutes les simulations sont réalisées le <span id="date"></span> et n'ont pas valeur contractuelle</p>
+      </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
