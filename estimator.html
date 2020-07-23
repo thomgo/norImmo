@@ -51,7 +51,7 @@
         <div class="row mt-5">
           <div class="col-12 col-md-6">
             <h3>Informations sur votre projet</h3>
-            <form action="" method="post">
+            <form id="estimatorForm" name="estimatorForm" action="" method="post">
               <div class="form-group">
                 <label for="surface">Surface prévisionnelle en m2</label>
                 <input name="surface" type="number" class="form-control" id="surface" min="20" placeholder="20">
@@ -69,7 +69,7 @@
                 </select>
               </div>
               <div class="text-center">
-                <button type="submit" class="btn mainBg">Estimer</button>                
+                <button type="button" onclick="estimate()" class="btn mainBg">Estimer</button>
               </div>
             </form>
           </div>
