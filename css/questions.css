@@ -6,3 +6,10 @@
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
+
+.answer {
+  height: 0;
+  transition: height 1s;
+  overflow: hidden;
+  padding-left: 1em;
+}
