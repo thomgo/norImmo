@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/estimator.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Accueil</title>
   </head>
@@ -47,24 +47,36 @@
 
     <main class="container mt-5">
       <section>
-        <h2>Quelques projets dans votre région</h2>
-        <div id="slider">
-          <div id="sliderImages">
-            <img id="slider_image" src="" alt="">
-            <div id="description" class="font-italic">
-              <p></p>
-            </div>
-            <button class="btn m-2 bg-dark text-white" id="previous" onclick="show()"><i class="fas fa-arrow-alt-circle-left"></i></button>
-            <button class="btn m-2 bg-dark text-white" id="next" onclick="show(true)"><i class="fas fa-arrow-alt-circle-right"></i></button>
+        <h2>Estimer mon projet</h2>
+        <div class="row mt-5">
+          <div class="col-12 col-md-6">
+            <h3>Informations sur votre projet</h3>
+            <form action="" method="post">
+              <div class="form-group">
+                <label for="surface">Surface prévisionnelle en m2</label>
+                <input name="surface" type="number" class="form-control" id="surface" min="20" placeholder="20">
+              </div>
+              <div class="form-group">
+                <label for="bedrooms">Nombre de chambres</label>
+                <input name="bedrooms" type="number" class="form-control" id="bedrooms" min="1" placeholder="1">
+              </div>
+              <div class="form-group">
+                <label for="material">Matériaux de construction</label>
+                <select name="material" class="form-control" id="material">
+                  <option>Parpaing</option>
+                  <option>Brique</option>
+                  <option>Bois</option>
+                </select>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn mainBg">Estimer</button>                
+              </div>
+            </form>
+          </div>
+          <div class="col-12 col-md-6">
+            <h3>Estimation du coût total</h3>
           </div>
         </div>
-      </section>
-
-      <section class="mt-3">
-        <h3>NorImmo en quelques mots</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius itaque eveniet corporis omnis sit, animi repudiandae nobis totam exercitationem, sapiente, odio, id dignissimos neque magni laborum accusamus eos expedita!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ad laudantium provident aut, nisi facilis, quia dolores in explicabo quaerat saepe corporis officia exercitationem error optio perspiciatis, ipsa praesentium doloribus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repellendus molestias libero, commodi blanditiis, omnis voluptas inventore facere tempore, asperiores perferendis mollitia aliquam enim. Natus fuga asperiores sequi eligendi numquam.</p>
       </section>
     </main>
 
@@ -80,6 +92,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/estimator.js"></script>
   </body>
 </html>
