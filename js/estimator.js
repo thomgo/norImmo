@@ -15,13 +15,16 @@ class Estimator {
   }
 
   estim() {
-    for(let value of this.formData) {
-      console.log(value);
-    }
+    let result = 0
+    result += this.priceReference.surface * parseInt(this.formData.get("surface"));
+    result += this.priceReference.bedrooms * parseInt(this.formData.get("bedrooms"));
+    result *= (1 + (this.priceReference.material[this.formData.get("material")]/100));
+    return result;
   }
 }
 
 function estimate() {
   let estimator = new Estimator(document.getElementById('estimatorForm'), priceReference)
-  estimator.estim();
+  let resultTag = document.getElementById("estimResult");
+  resultTag.textContent = estimator.estim();
 }
