@@ -43,7 +43,7 @@ function show(direction = false) {
 }
 
 // Initialize the slider with the first image and description
-var currentIndex = 0;
+let currentIndex = 0;
 setCurrentContent();
 
 // Launches the setimage function every 3 secondes

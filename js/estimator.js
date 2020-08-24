@@ -11,7 +11,10 @@ const priceReference = {
 class Estimator {
   constructor(form, priceReference) {
     this.formData = new FormData(form);
-    this.priceReference = priceReference
+    this.priceReference = priceReference;
+    for(let value of new FormData(form)) {
+      console.log(value);
+    }
   }
 
   estim() {
